@@ -11,7 +11,7 @@ import {
 
 import {MEDIA_FRAGMENT, PRODUCT_CARD_FRAGMENT} from '~/lib/fragments';
 import {getHeroPlaceholder} from '~/lib/placeholders';
-import {FeaturedCollections, Hero} from '~/components';
+import {FeaturedCollections, Hero, IncentivesComponent} from '~/components';
 import {Layout, ProductSwimlane} from '~/components/index.server';
 
 export default function Homepage() {
@@ -60,6 +60,7 @@ function HomepageContent() {
       {primaryHero && (
         <Hero {...primaryHero} height="full" top loading="eager" />
       )}
+      <IncentivesComponent />
       <ProductSwimlane
         data={featuredProducts.nodes}
         title="Featured Products"
